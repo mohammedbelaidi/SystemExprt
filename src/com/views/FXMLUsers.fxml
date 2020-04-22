@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.users.FXMLUsersController">
+   <children>
+      <ImageView fitHeight="660.0" fitWidth="1254.0" layoutX="32.0" layoutY="14.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@reparation_ordinateur_portable_asus.png" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="351.0" layoutY="161.0" prefHeight="376.0" prefWidth="599.0" />
+      <AnchorPane fx:id="accueil" layoutX="351.0" layoutY="162.0" prefHeight="376.0" prefWidth="599.0" style="-fx-background-color: #ffa;" visible="false" AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="162.0">
+         <children>
+            <JFXRadioButton fx:id="crn_bleu" layoutX="234.0" layoutY="94.0" text="ecrane bleu" />
+            <JFXRadioButton fx:id="bip_son" layoutX="234.0" layoutY="139.0" text="Bip sonore" />
+            <JFXRadioButton fx:id="autre_p" layoutX="235.0" layoutY="192.0" text="autre probleme" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_play" layoutX="991.0" layoutY="295.0" prefHeight="130.0" prefWidth="290.0">
+         <children>
+            <ImageView fx:id="img_play" fitHeight="28.0" fitWidth="54.0" layoutX="131.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Play_50px_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lable_name" layoutX="53.0" layoutY="22.0" prefHeight="28.0" prefWidth="188.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="root" layoutX="235.0" layoutY="162.0" prefHeight="392.0" prefWidth="760.0">
+         <children>
+            <TextField fx:id="txt_search" layoutX="145.0" layoutY="29.0" prefHeight="48.0" prefWidth="437.0" style="-fx-background-radius: 15pt;" />
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="543.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Search_48px_1.png" />
+               </image>
+               <effect>
+                  <GaussianBlur radius="2.5" />
+               </effect>
+            </ImageView>
+            <ScrollPane fx:id="scroll" layoutX="6.0" layoutY="98.0" prefHeight="294.0" prefWidth="727.0" style="-fx-background-radius: 10pt;" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="7.0" layoutY="8.0" onAction="#back" text="Retour" />
+   </children>
+</AnchorPane>
